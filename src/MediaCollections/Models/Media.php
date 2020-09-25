@@ -2,6 +2,7 @@
 
 namespace Spatie\MediaLibrary\MediaCollections\Models;
 
+use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 use DateTimeInterface;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\Support\Responsable;
@@ -24,7 +25,7 @@ use Spatie\MediaLibrary\Support\File;
 use Spatie\MediaLibrary\Support\TemporaryDirectory;
 use Spatie\MediaLibrary\Support\UrlGenerator\UrlGeneratorFactory;
 
-class Media extends Model implements Responsable, Htmlable
+class Media extends Eloquent implements Responsable, Htmlable
 {
     use IsSorted,
         CustomMediaProperties,
